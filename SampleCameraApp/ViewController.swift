@@ -7,14 +7,39 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var photoPreviewImageView: UIImageView!
+    
+    var imagePicker: UIImagePickerController!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func didTapOnTakePhotoButton(_ sender: Any)
+    {
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        
+        // .overCurrentContext allows for landscape and portrait mode
+        imagePicker.modalPresentationStyle = .overCurrentContext
+        
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+    {
+        imagePicker.dismiss(animated: true, completion: nil)
+        photoPreviewImageView.image = info[.originalImage] as? UIImage
+    }
+    
 }
+
 
