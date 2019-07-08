@@ -26,12 +26,23 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
         
+        //customView stuff
+        let customViewController = CustomOverlayViewController(
+            nibName:"CustomOverlayViewController",
+            bundle: nil
+        )
+        let customView:CustomOverlayView = customViewController.view as! CustomOverlayView
+        customView.frame = self.imagePicker.view.frame
+        
         // .overCurrentContext allows for landscape and portrait mode
         imagePicker.modalPresentationStyle = .overCurrentContext
         
         imagePicker.sourceType = .camera
         
-        present(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: true, completion:
+            {
+            self.imagePicker.cameraOverlayView = customView
+            })
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])

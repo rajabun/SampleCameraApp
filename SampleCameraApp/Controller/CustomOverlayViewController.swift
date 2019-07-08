@@ -7,10 +7,13 @@
 //
 
 import UIKit
+//class CustomOverlayViewController: ViewController
+class CustomOverlayViewController: UIViewController
+{
 
-class CustomOverlayViewController: ViewController {
-
-    override func viewDidLoad() {
+    @IBOutlet weak var ruleOfThirdGrid: UIImageView!
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

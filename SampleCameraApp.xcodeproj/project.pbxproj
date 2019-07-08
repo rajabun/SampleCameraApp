@@ -43,6 +43,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E1F2DB022D2ED3A00E1B214 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E75D8E322CA4DEC001B7744 /* CustomOverlayView.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E1F2DB122D2ED4600E1B214 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4ED711BB22BA1636002A4221 /* Main.storyboard */,
+				4E75D8E022CA4D2A001B7744 /* CustomOverlayViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E1F2DB222D2ED4F00E1B214 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4ED711B922BA1636002A4221 /* ViewController.swift */,
+				4E75D8DF22CA4D2A001B7744 /* CustomOverlayViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		4ED711AB22BA1636002A4221 = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +88,10 @@
 		4ED711B622BA1636002A4221 /* SampleCameraApp */ = {
 			isa = PBXGroup;
 			children = (
+				4E1F2DB022D2ED3A00E1B214 /* Model */,
+				4E1F2DB122D2ED4600E1B214 /* View */,
+				4E1F2DB222D2ED4F00E1B214 /* Controller */,
 				4ED711B722BA1636002A4221 /* AppDelegate.swift */,
-				4ED711B922BA1636002A4221 /* ViewController.swift */,
-				4E75D8DF22CA4D2A001B7744 /* CustomOverlayViewController.swift */,
-				4E75D8E022CA4D2A001B7744 /* CustomOverlayViewController.xib */,
-				4E75D8E322CA4DEC001B7744 /* CustomOverlayView.swift */,
-				4ED711BB22BA1636002A4221 /* Main.storyboard */,
 				4ED711BE22BA1637002A4221 /* Assets.xcassets */,
 				4ED711C022BA1637002A4221 /* LaunchScreen.storyboard */,
 				4ED711C322BA1637002A4221 /* Info.plist */,

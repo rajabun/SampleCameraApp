@@ -8,7 +8,8 @@
 
 import UIKit
 
-class CustomOverlayView: UIView {
+class CustomOverlayView: UIView
+{
 
     /*
     // Only override draw() if you perform custom drawing.
