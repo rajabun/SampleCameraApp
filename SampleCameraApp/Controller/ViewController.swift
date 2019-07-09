@@ -35,7 +35,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         customView.frame = self.imagePicker.view.frame
         
         // .overCurrentContext allows for landscape and portrait mode
-        imagePicker.modalPresentationStyle = .overCurrentContext
+        //imagePicker.modalPresentationStyle = .overCurrentContext
         
         imagePicker.sourceType = .camera
         
